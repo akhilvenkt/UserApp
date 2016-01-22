@@ -1,30 +1,15 @@
-myApp.controller('UserController', function($scope){
+myApp.controller("UserController", function($scope, UserService) {
+	$scope.users = [];
+	$scope.fetchUsers=function(){
+		UserService.getUsers().then(
+                function(data) {
+                    $scope.users = data;
+                  },
+                 function(errResponse){
+                     console.error('Error while fetching users');
+                 }
+          );
+	}
+	$scope.fetchUsers();
 	
-	$scope.users=[{
-		  "userName":"Akhil",
-		  "userId": 2736,
-		  "age": 25,
-		  "dateOfJoin": "18-Dec-2015"
-		}
-		,
-		{
-		  "userName":"Surya",
-		  "userId": 2236,
-		  "age": 26,
-		  "dateOfJoin": "18-Dec-2015"
-		}
-		,
-		{
-		  "userName":"Lavya",
-		  "userId": 2736,
-		  "age": 22 ,
-		  "dateOfJoin": "28-Jul-2015"
-		},
-		{
-		  "userName":"Nithal",
-		  "userId": 2236,
-		  "age": 27,
-		  "dateOfJoin": "15-jan-2015"
-		}]
-			
 });
