@@ -1,4 +1,4 @@
-myApp.controller("UserController", function($scope, UserService) {
+myApp.controller('UserController', function($scope, UserService) {
 	$scope.users = [];
 	$scope.fetchUsers=function(){
 		UserService.getUsers().then(

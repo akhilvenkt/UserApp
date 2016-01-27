@@ -6,33 +6,13 @@
 	
     <link href="./app/shared/styles/main.css" rel="stylesheet">
 </head>
-<body ng-app="myApp">
-	<div >
-<!-- 	<table class="loginData"> 
-        	<tr>
-        		<td >User Name</td>
-       		</tr>
-       		<tr>
-        		
-        		<td > <input type="text" value="" /></td>
-        		
-       		</tr>
-       		<tr>
-        		<td>Password</td>
-       		</tr>
-       		<tr>
-        		<td ><input type="password"  value=""/></td>
-       		</tr>
-       		<tr>
-        		<td ><button class="loginButton"  data-ng-click="login()"> Login</button></td>
-       		</tr>
-       		
-        </table> -->
-        
+<body class="page_body" ng-app="myApp">
+ <div header></div>
+	<div class="main">
         <div>
         	<ul>
-        		<li><a href="#dashboard" >dashboard </a></li>
-        		<li><a href="#user" >user management</a></li>
+        		<li><a href="#dashboard" >Dashboard </a></li>
+        		<li><a href="#user" >User Management</a></li>
         	</ul>
         
         </div>
@@ -42,13 +22,21 @@
         </div>
 	 
 	</div>
+	<!-- Angular framework libraries -->
 	<script  src="./app/angular.min.js"></script>
 	<script  src="./app/angular-route.min.js"></script>
     <!-- Modules -->
-    <script src="./app/app.js"></script>
+    <script  src="./app/app.js"></script>
+    <script  src="./app/config.js"></script>
+    <!-- Controllers -->
     <script  src="./app/controllers/DashController.js"></script>
     <script  src="./app/controllers/UserController.js"></script>
-    <script  src="./app/config.js"></script>
+    <script  src="./app/controllers/LoginController.js"></script>
+    <!-- Services -->
     <script  src="./app/services/UserService.js"></script>
+    <script  src="./app/services/AuthenticationService.js"></script>
+    <!-- Directives -->
+    <script  src="./app/shared/directives/directives.js"></script>
+    <div footer></div>
 	</body>
 </html>
